@@ -1,0 +1,23 @@
+## This file provides a overview of how you can load a file from local machine to google cloud storage 
+
+
+Step1: Installl google cloud storage SDK 
+pip install google-cloud-storage
+
+Step2: Connect your google cloud account so that SDK is authorized to work on GCP objects 
+gcloud auth login
+
+
+Step3: Specify the right project to use for gcloud SDK commands
+gcloud config set project learngcp
+
+Step4: Down load the authorization json file for the project from google cloud console and then update the variable GOOGLE_APPLICATION_CREDENTIALS to that path
+export GOOGLE_APPLICATION_CREDENTIALS="/Users/demo/Documents/learn/gcp/credentials/learngcp-60e9c3aaf88b.json"
+
+Step5: Take the service account that is mentioned in the crednetials json file and give it access to appropriate objects in IAM console
+
+
+Step6: Now you can leverage python code that uses SDK to upload files
+CreateCloudStorage.py
+
+
